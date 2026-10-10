@@ -1,0 +1,36 @@
+
+using System.Collections.Generic;
+using UnityEngine;
+
+public class SimplePool : MonoBehaviour
+{
+    [SerializeField] private GameObject prefab;
+    [SerializeField] private int poolSize = 20;
+
+    private List<GameObject> pool = new List<GameObject>();
+
+    private void Awake()
+    {
+        for (int i = 0; i < poolSize; i++)
+        {
+            GameObject obj = Instantiate(prefab, transform);
+            obj.SetActive(false);
+            pool.Add(obj);
+        }
+    }
+
+    public GameObject GetFromPool(Vector3 position)
+    {
+        foreach (GameObject obj in pool)
+        {
+            if (!obj.activeSelf)
+            {
+                obj.transform.position = position;
+                obj.SetActive(true);
+                return obj;
+            }
+        }
+
+        return null;
+    }
+}
