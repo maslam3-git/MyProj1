@@ -3,7 +3,7 @@ CPSC 386
 
 1. Game Description:
 
-Space Defender is a 2D arcade shooter developed in Unity 6. The player controls a spaceship and must destroy incoming asteroids while avoiding collisions. Destroying asteroids increases the player's score, while collisions reduce their health. The game ends when the player runs out of health.
+This game is a 2D arcade shooter developed in Unity 6. The player controls a spaceship and must destroy incoming asteroids while avoiding collisions. Destroying asteroids increases the player's score, while collisions reduce their health. The game ends when the player runs out of health.
 
 The game includes a main menu, gameplay scene, scoring system, object pooling, pause functionality, 2D physics, and persistent high-score saving.
 
